@@ -34,6 +34,7 @@ public class Login extends javax.swing.JFrame {
         cedula = new javax.swing.JTextField();
         nombre = new javax.swing.JTextField();
         btentrar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -69,7 +70,10 @@ public class Login extends javax.swing.JFrame {
                 btentrarActionPerformed(evt);
             }
         });
-        jPanel2.add(btentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 130, -1));
+        jPanel2.add(btentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 130, -1));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Captura de pantalla 2024-11-15 203719.png"))); // NOI18N
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 210, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,7 +83,7 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -131,6 +135,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btentrar;
     private javax.swing.JTextField cedula;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbbienvenida;
     private javax.swing.JLabel lbcedula;
