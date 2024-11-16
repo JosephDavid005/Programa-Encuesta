@@ -9,10 +9,8 @@
  * @author JOSEPH
  */
 public class Login extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Login
-     */
+    public String usuario="";
+    
     public Login() {
         initComponents();
     }
@@ -31,8 +29,8 @@ public class Login extends javax.swing.JFrame {
         lbbienvenida = new javax.swing.JLabel();
         lbnombre = new javax.swing.JLabel();
         lbcedula = new javax.swing.JLabel();
-        cedula = new javax.swing.JTextField();
-        nombre = new javax.swing.JTextField();
+        txcedula = new javax.swing.JTextField();
+        txnombre = new javax.swing.JTextField();
         btentrar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
@@ -56,13 +54,13 @@ public class Login extends javax.swing.JFrame {
         lbcedula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Captura de pantalla 2024-11-15 202209.png"))); // NOI18N
         jPanel2.add(lbcedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
 
-        cedula.addActionListener(new java.awt.event.ActionListener() {
+        txcedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cedulaActionPerformed(evt);
+                txcedulaActionPerformed(evt);
             }
         });
-        jPanel2.add(cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 280, 30));
-        jPanel2.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 280, 30));
+        jPanel2.add(txcedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 280, 30));
+        jPanel2.add(txnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 280, 30));
 
         btentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Captura de pantalla 2024-11-15 202430.png"))); // NOI18N
         btentrar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,12 +87,16 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaActionPerformed
+    private void txcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txcedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cedulaActionPerformed
+    }//GEN-LAST:event_txcedulaActionPerformed
 
     private void btentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btentrarActionPerformed
-        // TODO add your handling code here:
+        String nom="", ced="";
+        boolean vot=false;
+        nom=txnombre.getText();
+        ced=txcedula.getText();
+        Usuarios objS=new Usuarios(nom, ced, vot);
     }//GEN-LAST:event_btentrarActionPerformed
 
     /**
@@ -130,17 +132,18 @@ public class Login extends javax.swing.JFrame {
                 new Login().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btentrar;
-    private javax.swing.JTextField cedula;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lbbienvenida;
     private javax.swing.JLabel lbcedula;
     private javax.swing.JLabel lbimg;
     private javax.swing.JLabel lbnombre;
-    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField txcedula;
+    private javax.swing.JTextField txnombre;
     // End of variables declaration//GEN-END:variables
 }
